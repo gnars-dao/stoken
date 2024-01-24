@@ -1,0 +1,39 @@
+{
+  "name": "@pioneer-platform/pioneer-metamask-sdk",
+  "version": "0.0.1",
+  "main": "./lib/index.js",
+  "types": "./lib/index.d.ts",
+  "scripts": {
+    "npm": "npm i",
+    "npm-update": "npm update",
+    "test": "npm run build && node __tests__/test-module.js",
+    "test-cli-export": "npm run build && node __tests__/reference-test-cli-export.js",
+    "lint": "prettier --write '**/**/*.ts'",
+    "start": "nodemon --watch 'src/**/*.ts' --exec ts-node __tests__node",
+    "build": "tsc -p .",
+    "prepublish": "npm run build",
+    "refresh": "rm -rf ./node_modules ./package-lock.json && npm install",
+    "test-jest": "jest --coverage",
+    "test:watch": "jest --coverage --watchAll",
+    "build:watch": "onchange 'src/**/*.ts' -- npm run build",
+    "view:coverage": "serve coverage/lcov-report",
+    "clean": "rm -rf coverage src/**/*.js src/**/*.map lib node_modules"
+  },
+  "dependencies": {
+    "@pioneer-platform/pioneer": "latest",
+    "@pioneer-platform/pioneer-coins": "^6.2.12",
+    "dotenv": "^8.2.0",
+    "prettyjson": "^1.2.1"
+  },
+  "devDependencies": {
+    "@types/jest": "^25.2.3",
+    "@types/node": "^13.13.45",
+    "@types/source-map-support": "^0.5.3",
+    "jest": "^26.6.3",
+    "onchange": "^7.1.0",
+    "serve": "^11.3.2",
+    "source-map-support": "^0.5.19",
+    "ts-jest": "^25.4.0",
+    "typescript": "^3.9.9"
+  }
+}

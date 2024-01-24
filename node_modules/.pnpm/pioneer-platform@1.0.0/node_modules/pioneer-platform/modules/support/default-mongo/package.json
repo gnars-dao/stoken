@@ -1,0 +1,8 @@
+{
+  "name": "@pioneer-platform/default-mongo",
+  "version": "0.0.2",
+  "dependencies": {
+    "dotenv": "latest",
+    "monk": "latest"
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "name": "@pioneer-platform/thor-network",
+  "version": "6.2.4",
+  "main": "./lib/index.js",
+  "types": "./lib/index.d.ts",
+  "scripts": {
+    "create": "npm run build && npm run test",
+    "build": "tsc -p .",
+    "test": "npm run build && node __tests__/test-module.js",
+    "prepublish": "rm -R lib && npm run build",
+    "refresh": "rm -rf ./node_modules ./package-lock.json && npm install"
+  },
+  "dependencies": {
+    "@pioneer-platform/loggerdog": "latest",
+    "bech32": "^1.1.4",
+    "bip32": "^2.0.5",
+    "bip39": "^3.0.2",
+    "bitcoinjs-lib": "^5.1.10",
+    "coininfo": "^5.1.0",
+    "cosmos-client": "^0.40.0-rc1",
+    "crypto-js": "^3.3.0",
+    "dotenv": "^8.2.0",
+    "hdkey": "^1.1.2",
+    "secp256k1": "^3.8.0",
+    "ts-node": "^8.10.2",
+    "typescript": "^3.9.5"
+  }
+}

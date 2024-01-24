@@ -1,0 +1,49 @@
+{
+  "name": "pioneer-bex",
+  "version": "0.0.1",
+  "description": "A simple multi-chain explorer",
+  "productName": "Pioneer Browser Extension",
+  "author": "highlander <bithighlander@gmail.com>",
+  "private": true,
+  "scripts": {
+    "test": "echo \"No test specified\" && exit 0",
+    "run-dev": "quasar dev -m bex"
+  },
+  "dependencies": {
+    "@pioneer-platform/loggerdog": "0.0.1",
+    "@pioneer-platform/pioneer": "latest",
+    "@pioneer-platform/pioneer-hardware-web": "^6.3.5",
+    "@quasar/extras": "^1.9.19",
+    "@shapeshiftoss/hdwallet-core": "^1.11.1",
+    "@shapeshiftoss/hdwallet-keepkey": "^1.11.1",
+    "@shapeshiftoss/hdwallet-keepkey-webusb": "^1.11.1",
+    "@types/bytebuffer": "^5.0.42",
+    "@types/w3c-web-usb": "^1.0.4",
+    "core-js": "^3.9.1",
+    "cryptr": "^6.0.2",
+    "local-storage": "^2.0.0",
+    "quasar": "^1.0.0",
+    "vue-i18n": "^8.23.0",
+    "webcrypto-liner": "^1.2.4"
+  },
+  "devDependencies": {
+    "@quasar/app": "^2.0.0",
+    "@types/node": "^10.17.15"
+  },
+  "browserslist": [
+    "last 10 Chrome versions",
+    "last 10 Firefox versions",
+    "last 4 Edge versions",
+    "last 7 Safari versions",
+    "last 8 Android versions",
+    "last 8 ChromeAndroid versions",
+    "last 8 FirefoxAndroid versions",
+    "last 10 iOS versions",
+    "last 5 Opera versions"
+  ],
+  "engines": {
+    "node": ">= 10.18.1",
+    "npm": ">= 6.13.4",
+    "yarn": ">= 1.21.1"
+  }
+}

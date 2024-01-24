@@ -1,0 +1,19 @@
+import { Query } from './Query'
+import { AbiResponse } from '../../entities/AbiResponse'
+
+export class GetAbi extends Query<AbiResponse> {
+  ENDPOINT: string = 'chain/get_raw_abi'
+  accountName: string
+
+
+  constructor(accountName: string) {
+    super()
+    this.accountName = accountName
+  }
+
+  async getData() {
+    return {
+      account_name: this.accountName
+    }
+  }
+}

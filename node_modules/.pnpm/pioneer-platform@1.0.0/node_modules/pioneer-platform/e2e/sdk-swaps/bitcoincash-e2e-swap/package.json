@@ -1,0 +1,30 @@
+{
+  "name": "bitcoincash-e2e-swap",
+  "version": "0.0.1",
+  "scripts": {
+    "npm": "npm i",
+    "npm-update": "npm update",
+    "start": "node lib/index.js",
+    "build": "tsc -p .",
+    "test": "rm -Rf ~/.pioneer && npm run build && npm run start",
+    "docker:build": "docker build --build-arg NPM_TOKEN=$NPM_TOKEN -t tests-e2e/atom-e2e-app:latest .",
+    "docker:run": "docker run --env-file=../../../.env tests-e2e/atom-e2e-app:latest",
+    "docker:tag": "",
+    "docker:push": ""
+  },
+  "dependencies": {
+    "@babel/runtime": "^7.13.10",
+    "@pioneer-platform/loggerdog": "latest",
+    "@pioneer-platform/pioneer-app": "latest",
+    "@pioneer-platform/pioneer-sdk": "latest",
+    "assert": "^2.0.0",
+    "dotenv": "^6.2.0",
+    "request": "^2.88.2",
+    "request-promise": "^4.2.5",
+    "wait-promise": "^0.4.1"
+  },
+  "devDependencies": {
+    "jest-json-reporter": "^1.2.2",
+    "jest-junit": "^6.2.1"
+  }
+}

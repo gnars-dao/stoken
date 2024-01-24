@@ -1,0 +1,29 @@
+{
+  "name": "@pioneer-platform/blocknative-client",
+  "version": "0.0.1",
+  "main": "./lib/index.js",
+  "types": "./lib/index.d.ts",
+  "dependencies": {
+    "@pioneer-platform/loggerdog": "0.0.1",
+    "axios": "^0.21.1",
+    "dotenv": "^8.2.0"
+  },
+  "scripts": {
+    "npm": "npm i",
+    "test": "npm run build && node __tests__/test-module.js",
+    "build": "tsc -p .",
+    "prepublish": "npm run build",
+    "refresh": "rm -rf ./node_modules ./package-lock.json && npm install"
+  },
+  "devDependencies": {
+    "@types/jest": "^25.2.3",
+    "@types/node": "^13.13.21",
+    "@types/source-map-support": "^0.5.3",
+    "jest": "^26.4.2",
+    "onchange": "^7.0.2",
+    "serve": "^11.3.2",
+    "source-map-support": "^0.5.19",
+    "ts-jest": "^25.4.0",
+    "typescript": "^3.9.7"
+  }
+}

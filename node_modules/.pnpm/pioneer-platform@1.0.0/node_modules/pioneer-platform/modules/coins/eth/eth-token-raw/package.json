@@ -1,0 +1,22 @@
+{
+  "name": "@pioneer-platform/pioneer-eth-token-raw",
+  "version": "6.2.7",
+  "main": "./lib/index.js",
+  "types": "./lib/main.d.ts",
+  "_moduleAliases": {
+    "@coins": "lib/coins"
+  },
+  "scripts": {
+    "npm": "npm i",
+    "build": "tsc -p .",
+    "prepublish": "npm run build"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "@types/express": "^4.17.6",
+    "@types/node": "^13.13.4",
+    "nodemon": "^2.0.3",
+    "ts-node": "^8.8.2",
+    "typescript": "^3.8.3"
+  }
+}

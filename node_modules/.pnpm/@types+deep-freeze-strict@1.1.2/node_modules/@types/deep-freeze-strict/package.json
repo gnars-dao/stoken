@@ -1,0 +1,25 @@
+{
+    "name": "@types/deep-freeze-strict",
+    "version": "1.1.2",
+    "description": "TypeScript definitions for deep-freeze-strict",
+    "homepage": "https://github.com/DefinitelyTyped/DefinitelyTyped/tree/master/types/deep-freeze-strict",
+    "license": "MIT",
+    "contributors": [
+        {
+            "name": "Mohamed Hegazy",
+            "githubUsername": "mhegazy",
+            "url": "https://github.com/mhegazy"
+        }
+    ],
+    "main": "",
+    "types": "index.d.ts",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/DefinitelyTyped/DefinitelyTyped.git",
+        "directory": "types/deep-freeze-strict"
+    },
+    "scripts": {},
+    "dependencies": {},
+    "typesPublisherContentHash": "b17030657000c460f25286cc7d4ace30ad98c966587adcec7397629ce9fbeff6",
+    "typeScriptVersion": "4.5"
+}

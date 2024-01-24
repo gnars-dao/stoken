@@ -1,0 +1,91 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.SNGLS = void 0;
+exports.SNGLS = {
+    metaData: {
+        contractAddress: "0xaec2e87e0a235266d9c5adc9deb4b2e29b54d009",
+        BASE: 1,
+        accountsList: "SNGLS_accounts",
+        from: "from",
+        to: "to",
+        value: "value"
+    },
+    ABI: [{
+            "inputs": [],
+            "constant": true,
+            "type": "function",
+            "name": "name",
+            "outputs": [{ "type": "string", "name": "" }]
+        }, {
+            "inputs": [{ "type": "address", "name": "_spender" }, { "type": "uint256", "name": "_value" }],
+            "constant": false,
+            "type": "function",
+            "name": "approve",
+            "outputs": [{ "type": "bool", "name": "success" }]
+        }, {
+            "inputs": [],
+            "constant": true,
+            "type": "function",
+            "name": "totalSupply",
+            "outputs": [{ "type": "uint256", "name": "" }]
+        }, {
+            "inputs": [{ "type": "address", "name": "from" }, { "type": "address", "name": "to" }, {
+                    "type": "uint256",
+                    "name": "value"
+                }], "constant": false, "type": "function", "name": "transferFrom", "outputs": [{ "type": "bool", "name": "" }]
+        }, {
+            "inputs": [],
+            "constant": true,
+            "type": "function",
+            "name": "decimals",
+            "outputs": [{ "type": "uint8", "name": "" }]
+        }, {
+            "inputs": [{ "type": "address", "name": "_for" }, { "type": "uint256", "name": "tokenCount" }],
+            "constant": false,
+            "type": "function",
+            "name": "issueTokens",
+            "outputs": [{ "type": "bool", "name": "" }]
+        }, {
+            "inputs": [{ "type": "address", "name": "_owner" }],
+            "constant": true,
+            "type": "function",
+            "name": "balanceOf",
+            "outputs": [{ "type": "uint256", "name": "balance" }]
+        }, {
+            "inputs": [],
+            "constant": true,
+            "type": "function",
+            "name": "symbol",
+            "outputs": [{ "type": "string", "name": "" }]
+        }, {
+            "inputs": [{ "type": "address", "name": "to" }, { "type": "uint256", "name": "value" }],
+            "constant": false,
+            "type": "function",
+            "name": "transfer",
+            "outputs": [{ "type": "bool", "name": "" }]
+        }, {
+            "inputs": [{ "type": "address", "name": "_owner" }, { "type": "address", "name": "_spender" }],
+            "constant": true,
+            "type": "function",
+            "name": "allowance",
+            "outputs": [{ "type": "uint256", "name": "remaining" }]
+        }, { "inputs": [], "type": "constructor" }, {
+            "inputs": [{
+                    "indexed": true,
+                    "type": "address",
+                    "name": "from"
+                }, { "indexed": true, "type": "address", "name": "to" }, { "indexed": false, "type": "uint256", "name": "value" }],
+            "type": "event",
+            "name": "Transfer",
+            "anonymous": false
+        }, {
+            "inputs": [{ "indexed": true, "type": "address", "name": "owner" }, {
+                    "indexed": true,
+                    "type": "address",
+                    "name": "spender"
+                }, { "indexed": false, "type": "uint256", "name": "value" }],
+            "type": "event",
+            "name": "Approval",
+            "anonymous": false
+        }]
+};

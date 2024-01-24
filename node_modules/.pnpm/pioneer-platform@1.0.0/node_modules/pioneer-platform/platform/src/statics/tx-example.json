@@ -1,0 +1,22 @@
+[
+    {
+        "_id": {
+            "$oid": "5ebb0ae76ec79f6883c6b7d5"
+        },
+        "asset": "ETH",
+        "addresses": ["0x288e6abaad49e3a97fa9b1742590a884b8255357", "0x33b35c665496ba8e71b22373843376740401f106"],
+        "events": [{
+            "type": "credit",
+            "address": "0x288e6abaad49e3a97fa9b1742590a884b8255357",
+            "amount": "0x288e6abaad49e3a97fa9b1742590a884b8255357",
+            "txid": "0x3276f8b1ca45909bcff4e5c50a5e956f2c53a29b84d46877dac0b7a86f773c9b"
+        }, {
+            "type": "debit",
+            "address": "0x33b35c665496ba8e71b22373843376740401f106",
+            "amount": -0.00001,
+            "txid": "0x3276f8b1ca45909bcff4e5c50a5e956f2c53a29b84d46877dac0b7a86f773c9b"
+        }],
+        "type": "transfer",
+        "height": 10053558
+    }    
+]

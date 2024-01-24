@@ -1,0 +1,319 @@
+"use strict";
+/*
+    Trezor nodes
+
+ */
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.getBlockBooks = void 0;
+//TODO move this to url module
+function getBlockBooks() {
+    return [
+        // Bitcoin
+        {
+            name: 'Bitcoin',
+            networkType: 'bitcoin',
+            symbol: 'btc',
+            bip44: "m/84'/0'/i'",
+            hasSignVerify: true,
+            decimals: 8,
+            explorer: {
+                tx: 'https://btc1.trezor.io/tx/',
+                account: 'https://btc1.trezor.io/xpub/',
+            },
+        },
+        {
+            name: 'Bitcoin (segwit)',
+            networkType: 'bitcoin',
+            accountType: 'segwit',
+            symbol: 'btc',
+            bip44: "m/49'/0'/i'",
+            hasSignVerify: true,
+            decimals: 8,
+            explorer: {
+                tx: 'https://btc1.trezor.io/tx/',
+                account: 'https://btc1.trezor.io/xpub/',
+            },
+        },
+        {
+            name: 'Bitcoin (legacy)',
+            networkType: 'bitcoin',
+            accountType: 'legacy',
+            symbol: 'btc',
+            bip44: "m/44'/0'/i'",
+            hasSignVerify: true,
+            decimals: 8,
+            explorer: {
+                tx: 'https://btc1.trezor.io/tx/',
+                account: 'https://btc1.trezor.io/xpub/',
+            },
+        },
+        // Litecoin
+        {
+            name: 'Litecoin',
+            networkType: 'bitcoin',
+            symbol: 'ltc',
+            bip44: "m/49'/2'/i'",
+            hasSignVerify: true,
+            decimals: 8,
+            explorer: {
+                tx: 'https://ltc1.trezor.io/tx/',
+                account: 'https://ltc1.trezor.io/xpub/',
+            },
+        },
+        {
+            name: 'Litecoin (legacy)',
+            networkType: 'bitcoin',
+            accountType: 'legacy',
+            symbol: 'ltc',
+            bip44: "m/44'/2'/i'",
+            hasSignVerify: true,
+            decimals: 8,
+            explorer: {
+                tx: 'https://ltc1.trezor.io/tx/',
+                account: 'https://ltc1.trezor.io/xpub/',
+            },
+        },
+        // Ethereum
+        {
+            name: 'Ethereum',
+            networkType: 'ethereum',
+            symbol: 'eth',
+            chainId: 1,
+            bip44: "m/44'/60'/0'/0/i",
+            hasSignVerify: true,
+            decimals: 18,
+            explorer: {
+                tx: 'https://eth1.trezor.io/tx/',
+                account: 'https://eth1.trezor.io/address/',
+            },
+        },
+        {
+            name: 'Ethereum Classic',
+            networkType: 'ethereum',
+            symbol: 'etc',
+            chainId: 61,
+            bip44: "m/44'/61'/0'/0/i",
+            hasSignVerify: true,
+            decimals: 18,
+            explorer: {
+                tx: 'https://etc1.trezor.io/tx/',
+                account: 'https://etc1.trezor.io/address/',
+            },
+        },
+        // Ripple
+        {
+            name: 'XRP',
+            networkType: 'ripple',
+            symbol: 'xrp',
+            bip44: "m/44'/144'/i'/0/0",
+            decimals: 6,
+            explorer: {
+                tx: 'https://xrpscan.com/tx/',
+                account: 'https://xrpscan.com/account/',
+            },
+        },
+        {
+            name: 'Bitcoin Cash',
+            networkType: 'bitcoin',
+            symbol: 'bch',
+            bip44: "m/44'/145'/i'",
+            decimals: 8,
+            explorer: {
+                tx: 'https://bch1.trezor.io/tx/',
+                account: 'https://bch1.trezor.io/xpub/',
+            },
+        },
+        {
+            name: 'Bitcoin Gold',
+            networkType: 'bitcoin',
+            symbol: 'btg',
+            bip44: "m/49'/156'/i'",
+            hasSignVerify: true,
+            decimals: 8,
+            explorer: {
+                tx: 'https://btg1.trezor.io/tx/',
+                account: 'https://btg1.trezor.io/xpub/',
+            },
+        },
+        {
+            name: 'Bitcoin Gold (legacy)',
+            networkType: 'bitcoin',
+            accountType: 'legacy',
+            symbol: 'btg',
+            bip44: "m/44'/156'/i'",
+            hasSignVerify: true,
+            decimals: 8,
+            explorer: {
+                tx: 'https://btg1.trezor.io/tx/',
+                account: 'https://btg1.trezor.io/xpub/',
+            },
+        },
+        {
+            name: 'Dash',
+            networkType: 'bitcoin',
+            symbol: 'dash',
+            bip44: "m/44'/5'/i'",
+            hasSignVerify: true,
+            decimals: 8,
+            explorer: {
+                tx: 'https://dash1.trezor.io/tx/',
+                account: 'https://dash1.trezor.io/xpub/',
+            },
+        },
+        {
+            name: 'DigiByte',
+            networkType: 'bitcoin',
+            symbol: 'dgb',
+            bip44: "m/49'/20'/i'",
+            hasSignVerify: true,
+            decimals: 8,
+            explorer: {
+                tx: 'https://dgb1.trezor.io/tx/',
+                account: 'https://dgb1.trezor.io/xpub/',
+            },
+        },
+        {
+            name: 'DigiByte (legacy)',
+            networkType: 'bitcoin',
+            accountType: 'legacy',
+            symbol: 'dgb',
+            bip44: "m/44'/20'/i'",
+            hasSignVerify: true,
+            decimals: 8,
+            explorer: {
+                tx: 'https://dgb1.trezor.io/tx/',
+                account: 'https://dgb1.trezor.io/xpub/',
+            },
+        },
+        {
+            name: 'Dogecoin',
+            networkType: 'bitcoin',
+            symbol: 'doge',
+            bip44: "m/44'/3'/i'",
+            hasSignVerify: true,
+            decimals: 8,
+            explorer: {
+                tx: 'https://doge1.trezor.io/tx/',
+                account: 'https://doge1.trezor.io/xpub/',
+            },
+        },
+        {
+            name: 'Namecoin',
+            networkType: 'bitcoin',
+            symbol: 'nmc',
+            bip44: "m/44'/7'/i'",
+            hasSignVerify: true,
+            decimals: 8,
+            explorer: {
+                tx: 'https://nmc1.trezor.io/tx/',
+                account: 'https://nmc1.trezor.io/xpub/',
+            },
+        },
+        {
+            name: 'Vertcoin',
+            networkType: 'bitcoin',
+            symbol: 'vtc',
+            bip44: "m/49'/28'/i'",
+            hasSignVerify: true,
+            decimals: 8,
+            explorer: {
+                tx: 'https://vtc1.trezor.io/tx/',
+                account: 'https://vtc1.trezor.io/xpub/',
+            },
+        },
+        {
+            name: 'Vertcoin (legacy)',
+            networkType: 'bitcoin',
+            accountType: 'legacy',
+            symbol: 'vtc',
+            bip44: "m/44'/28'/i'",
+            hasSignVerify: true,
+            decimals: 8,
+            explorer: {
+                tx: 'https://vtc1.trezor.io/tx/',
+                account: 'https://vtc1.trezor.io/xpub/',
+            },
+        },
+        {
+            name: 'Zcash',
+            networkType: 'bitcoin',
+            symbol: 'zec',
+            bip44: "m/44'/133'/i'",
+            hasSignVerify: true,
+            decimals: 8,
+            explorer: {
+                tx: 'https://zec1.trezor.io/tx/',
+                account: 'https://zec1.trezor.io/xpub/',
+            },
+        },
+        // testnet
+        {
+            name: 'Bitcoin Testnet',
+            networkType: 'bitcoin',
+            symbol: 'test',
+            bip44: "m/84'/1'/i'",
+            hasSignVerify: true,
+            decimals: 8,
+            testnet: true,
+            explorer: {
+                tx: 'https://tbtc1.trezor.io/tx/',
+                account: 'https://tbtc1.trezor.io/xpub/',
+            },
+        },
+        {
+            name: 'Bitcoin Testnet (segwit)',
+            networkType: 'bitcoin',
+            accountType: 'segwit',
+            symbol: 'test',
+            bip44: "m/49'/1'/i'",
+            hasSignVerify: true,
+            decimals: 8,
+            testnet: true,
+            explorer: {
+                tx: 'https://tbtc1.trezor.io/tx/',
+                account: 'https://tbtc1.trezor.io/xpub/',
+            },
+        },
+        {
+            name: 'Bitcoin Testnet (legacy)',
+            networkType: 'bitcoin',
+            accountType: 'legacy',
+            symbol: 'test',
+            bip44: "m/44'/1'/i'",
+            hasSignVerify: true,
+            decimals: 8,
+            testnet: true,
+            explorer: {
+                tx: 'https://tbtc1.trezor.io/tx/',
+                account: 'https://tbtc1.trezor.io/xpub/',
+            },
+        },
+        {
+            name: 'Ethereum Ropsten',
+            networkType: 'ethereum',
+            symbol: 'trop',
+            bip44: "m/44'/1'/0'/0/i",
+            hasSignVerify: true,
+            chainId: 3,
+            decimals: 18,
+            testnet: true,
+            explorer: {
+                tx: 'https://ropsten1.trezor.io/tx/',
+                account: 'https://ropsten1.trezor.io/address/',
+            },
+        },
+        {
+            name: 'XRP Testnet',
+            networkType: 'ripple',
+            symbol: 'txrp',
+            bip44: "m/44'/144'/i'/0/0",
+            decimals: 6,
+            testnet: true,
+            explorer: {
+                tx: 'https://test.bithomp.com/explorer/',
+                account: 'https://test.bithomp.com/explorer/',
+            },
+        },
+    ];
+}
+exports.getBlockBooks = getBlockBooks;

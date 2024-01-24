@@ -1,0 +1,42 @@
+{
+  "name": "@pioneer-platform/fio-network",
+  "version": "6.2.20",
+  "main": "./lib/index.js",
+  "types": "./lib/main.d.ts",
+  "scripts": {
+    "npm": "npm i",
+    "test": "npm run build && node __tests__/test-module.js",
+    "test-pretty": "npm run build && node __tests__/test-module.js",
+    "lint": "prettier --write '**/**/*.ts'",
+    "start": "nodemon --watch 'src/**/*.ts' --exec ts-node src/index.ts",
+    "run-bridge": "nodemon --watch 'src/**/*.ts' --exec ts-node src/index.ts --auth",
+    "create": "npm run build && npm run test",
+    "build": "tsc -p .",
+    "prepublish": "npm run build",
+    "refresh": "rm -rf ./node_modules ./package-lock.json && npm install"
+  },
+  "dependencies": {
+    "@fioprotocol/fiojs": "^1.0.1",
+    "@fioprotocol/fiosdk": "^1.0.2",
+    "@pioneer-platform/loggerdog": "latest",
+    "@scatterjs/core": "^2.7.54",
+    "@scatterjs/fio": "^1.5.37",
+    "@types/node": "^13.13.12",
+    "axios": "^0.19.2",
+    "dotenv": "^8.2.0",
+    "json-beautify": "^1.1.1",
+    "json-colorizer": "^2.2.2",
+    "openapi-client-axios": "^3.6.1",
+    "request": "^2.88.2",
+    "socket.io-client": "^2.3.0",
+    "ts-node": "^8.10.2",
+    "typescript": "^3.9.5",
+    "when": "^3.7.8"
+  },
+  "devDependencies": {
+    "@types/node": "^13.13.4",
+    "nodemon": "^2.0.3",
+    "ts-node": "^8.8.2",
+    "typescript": "^3.8.3"
+  }
+}

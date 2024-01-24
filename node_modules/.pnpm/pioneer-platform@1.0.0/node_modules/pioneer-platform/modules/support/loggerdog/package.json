@@ -1,0 +1,21 @@
+{
+  "name": "@pioneer-platform/loggerdog",
+  "version": "0.0.1",
+  "main": "./lib/index.js",
+  "types": "./lib/main.d.ts",
+  "scripts": {
+    "run-test": "npm run build && node __tests__/test-module.js",
+    "build": "tsc",
+    "prepublish": "tsc"
+  },
+  "dependencies": {
+    "cli-color": "^1.4.0",
+    "os": "^0.1.1",
+    "request": "^2.88.2",
+    "@types/node": "^13.13.12",
+    "dotenv": "^8.2.0",
+    "request-promise": "^4.2.6",
+    "ts-node": "^8.10.2",
+    "typescript": "^3.9.5"
+  }
+}

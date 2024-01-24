@@ -1,0 +1,51 @@
+@font-face {
+  font-family: 'axiom';
+  src:  url('fonts/axiom.eot?d0a441');
+  src:  url('fonts/axiom.eot?d0a441#iefix') format('embedded-opentype'),
+    url('fonts/axiom.ttf?d0a441') format('truetype'),
+    url('fonts/axiom.woff?d0a441') format('woff'),
+    url('fonts/axiom.svg?d0a441#axiom') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="axiom-"], [class*=" axiom-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'axiom' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.axiom-fox:before {
+  content: "\e900";
+}
+.axiom-history:before {
+  content: "\e901";
+}
+.axiom-dashboard:before {
+  content: "\e902";
+}
+.axiom-money:before {
+  content: "\e903";
+}
+.axiom-receive:before {
+  content: "\e904";
+}
+.axiom-send:before {
+  content: "\e905";
+}
+.axiom-swap:before {
+  content: "\e906";
+}
+.axiom-wallet:before {
+  content: "\e907";
+}

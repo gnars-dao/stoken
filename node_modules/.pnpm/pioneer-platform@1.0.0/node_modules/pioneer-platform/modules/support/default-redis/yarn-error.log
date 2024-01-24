@@ -1,0 +1,44 @@
+Arguments:
+  /home/highlander/.nvm/versions/node/v10.16.0/bin/node /home/highlander/.yarn/bin/yarn.js
+
+PATH:
+  /home/highlander/.yarn/bin:/home/highlander/.config/yarn/global/node_modules/.bin:/home/highlander/.cargo/bin:/home/highlander/.yarn/bin:/home/highlander/.config/yarn/global/node_modules/.bin:/home/highlander/.nvm/versions/node/v10.16.0/bin:/home/highlander/.local/bin:/home/highlander/bin:/usr/share/Modules/bin:/usr/local/bin:/usr/local/sbin:/usr/bin:/usr/sbin:/usr/local/go/bin:/home/highlander/go/bin:/home/highlander/.pulumi/bin:/home/highlander/.pulumi/bin
+
+Yarn version:
+  1.21.1
+
+Node version:
+  10.16.0
+
+Platform:
+  linux x64
+
+Trace:
+  Error: https://registry.yarnpkg.com/@pioneer-platform%2feth-network: Not found
+      at Request.params.callback [as _callback] (/home/highlander/.yarn/lib/cli.js:66947:18)
+      at Request.self.callback (/home/highlander/.yarn/lib/cli.js:140665:22)
+      at Request.emit (events.js:198:13)
+      at Request.<anonymous> (/home/highlander/.yarn/lib/cli.js:141637:10)
+      at Request.emit (events.js:198:13)
+      at IncomingMessage.<anonymous> (/home/highlander/.yarn/lib/cli.js:141559:12)
+      at Object.onceWrapper (events.js:286:20)
+      at IncomingMessage.emit (events.js:203:15)
+      at endReadableNT (_stream_readable.js:1129:12)
+      at process._tickCallback (internal/process/next_tick.js:63:19)
+
+npm manifest:
+  {
+    "name": "@pioneer-platform/pioneer-default-redis",
+    "version": "5.3.14",
+    "dependencies": {
+      "dotenv": "^8.2.0",
+      "ioredis": "^4.14.1",
+      "ioredis-mock": "^4.19.0"
+    }
+  }
+
+yarn manifest:
+  No manifest
+
+Lockfile:
+  No lockfile

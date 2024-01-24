@@ -1,0 +1,28 @@
+{
+  "name": "@shapeshiftoss/common-api",
+  "version": "9.3.0",
+  "license": "MIT",
+  "main": "dist/index.js",
+  "source": "src/index.ts",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "clean": "rm -rf dist node_modules",
+    "watch": "tsc --watch"
+  },
+  "dependencies": {
+    "@shapeshiftoss/blockbook": "^9.3.0",
+    "bignumber.js": "^9.1.1",
+    "tsoa": "^4.1.0",
+    "uuid": "^8.3.2",
+    "ws": "^8.8.0"
+  },
+  "devDependencies": {
+    "@types/uuid": "^8.3.4",
+    "@types/ws": "^8.5.3"
+  },
+  "gitHead": "a55e87cb3a16eec4193ace36d4a9f92595a2cd9e"
+}

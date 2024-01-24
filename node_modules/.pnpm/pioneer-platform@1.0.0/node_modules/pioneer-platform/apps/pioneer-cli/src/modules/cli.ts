@@ -1,0 +1,11 @@
+/*
+
+        CLI ux
+
+        Wallet context
+
+        each wallet has set of commands
+
+
+
+ */
