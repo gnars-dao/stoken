@@ -1,9 +1,9 @@
-# Skatehive App
+# Gnarly Media House 
 
 ## Contributors 
 
 <a href="https://github.com/sktbrd/skateapp/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=sktbrd/skateapp" />
+  <img src="https://i.ibb.co/Kmn8pk9/image.png" />
 </a>
 
 
